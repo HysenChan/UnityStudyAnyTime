@@ -4,33 +4,33 @@ using UnityEngine;
 
 public class LifeCycle_0817 : MonoBehaviour
 {
-    private void Awake()
+    private void Awake ()
     {
-        Debug.Log("Awake");
+        Debug.Log ("Awake");
     }
 
-    private void OnEnable()
+    private void OnEnable ()
     {
-        Debug.Log("OnEnable");
+        Debug.Log ("OnEnable");
     }
 
     // Start is called before the first frame update
-    void Start()
+    void Start ()
     {
-        Debug.Log("Start");
+        Debug.Log ("Start");
     }
-    private void OnDisable()
+    private void OnDisable ()
     {
-        Debug.Log("OnDisable");
-    }
-
-    private void OnDestroy()
-    {
-        Debug.Log("OnDestroy");
+        Debug.Log ("OnDisable");
     }
 
-    private void OnApplicationQuit()
+    private void OnDestroy ()
     {
-        Debug.Log("OnApplicationQuit");
+        Debug.Log ("OnDestroy");
+    }
+
+    private void OnApplicationQuit ()
+    {
+        Debug.Log ("OnApplicationQuit");
     }
 }

@@ -5,17 +5,17 @@ using UnityEngine;
 public class Coroutine_0817 : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    void Start ()
     {
-        StartCoroutine(CreateCube());
+        StartCoroutine (CreateCube ());
     }
 
-    IEnumerator CreateCube()
+    IEnumerator CreateCube ()
     {
         for (int i = 0; i < 100; i++)
         {
-            GameObject.CreatePrimitive(PrimitiveType.Cube).transform.position=Vector3.one*i;
+            GameObject.CreatePrimitive (PrimitiveType.Cube).transform.position = Vector3.one * i;
         }
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds (1f);
     }
 }
