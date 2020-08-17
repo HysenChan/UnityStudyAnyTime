@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class Coroutine_0817 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start ()
-    {
-        StartCoroutine (CreateCube ());
-    }
-
     IEnumerator CreateCube ()
     {
         for (int i = 0; i < 100; i++)
@@ -17,5 +11,26 @@ public class Coroutine_0817 : MonoBehaviour
             GameObject.CreatePrimitive (PrimitiveType.Cube).transform.position = Vector3.one * i;
         }
         yield return new WaitForSeconds (1f);
+    }
+
+    private Coroutine m_Coroutine=null;
+
+    private void OnGUI()
+    {
+        if (GUILayout.Button("StartCoroutine"))
+        {
+            if (m_Coroutine!=null)
+            {
+                StopCoroutine(m_Coroutine);
+            }
+            m_Coroutine=StartCoroutine(CreateCube());
+        }
+        if (GUILayout.Button("StopCoroutine"))
+        {
+            if (m_Coroutine!=null)
+            {
+                StopCoroutine(m_Coroutine);
+            }
+        }
     }
 }
