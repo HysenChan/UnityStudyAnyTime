@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Coroutine_0817 : MonoBehaviour
 {
+    /// <summary>
+    /// 创建Cube
+    /// </summary>
+    /// <returns>等待1秒</returns>
     IEnumerator CreateCube ()
     {
         for (int i = 0; i < 100; i++)
@@ -13,6 +17,9 @@ public class Coroutine_0817 : MonoBehaviour
         yield return new WaitForSeconds (1f);
     }
 
+    /// <summary>
+    /// 保存协程，防止start和stop的不是同一个对象
+    /// </summary>
     private Coroutine m_Coroutine=null;
 
     private void OnGUI()
