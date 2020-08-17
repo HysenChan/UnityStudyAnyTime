@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LifeCycle : MonoBehaviour
+public class LifeCycle_0817 : MonoBehaviour
 {
     private void Awake()
     {
